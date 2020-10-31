@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Investment extends Model
 {
     use HasFactory;
+
+    const TABLE = 'investments';
+
+    protected $table = self::TABLE;
 }
