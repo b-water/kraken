@@ -1,42 +1,44 @@
 <template>
-    <div>
-        <div class="p-6 bg-white border-b border-gray-200">
-            <div class="grid grid-cols-10">
-                <div class="col-span-9">
-                </div>
-                <div class="col-span-1">
-                    <JetButton>
-                        Add Stock
-                    </JetButton>
-                </div>
-            </div>
+  <div>
+    <div class="p-6 bg-white border-b border-gray-200">
+      <div class="grid grid-cols-10">
+        <div class="col-span-8">
+          <JetButton>Deposit</JetButton>
+          <JetButton>Payment</JetButton>
         </div>
-
-        <div class="bg-gray-200 bg-opacity-25">
-            <div class="grid grid-cols-10 gap-1">
-                <div class="col-span-6 bg-green-300 p-4">
-                    <div class="px-3 py-2 rounded-md text-sm font-medium text-white bg-green-500 focus:outline-none focus:text-white focus:bg-green-700">
-                        FTSE All-World
-                    </div>
-                </div>
-                <div class="col-span-1 bg-yellow-300 p-4">DEvelopeed Markets</div>
-                <div class="col-span-2 bg-red-300 p-4">STOXX Global Select Dividend</div>
-                <div class="col-span-1 bg-gray-300 p-4">iShares MSCI World</div>
-            </div>
-        </div>   
+        <div class="col-span-2">
+          <JetButton>Add Account</JetButton>
+        </div>
+      </div>
     </div>
+
+    <div class="bg-gray-200 bg-opacity-25">
+      <div class="grid grid-cols-10 gap-1">
+        <div class="col-span-6 bg-green-300 p-4">
+          <div
+            class="px-3 py-2 rounded-md text-sm font-medium text-white bg-green-500 focus:outline-none focus:text-white focus:bg-green-700"
+          >
+            comdirect
+          </div>
+        </div>
+        <div class="col-span-1 bg-yellow-300 p-4">DKB</div>
+        <div class="col-span-2 bg-red-300 p-4">Scalable Capital</div>
+        <div class="col-span-1 bg-gray-300 p-4">Notgroschen</div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-    import JetApplicationLogo from '@/Jetstream/ApplicationLogo'
-    import JetButton from  '@/Jetstream/Button'
-    import JetNavLink from '@/Jetstream/NavLink'
+import JetApplicationLogo from "@/Jetstream/ApplicationLogo";
+import Button from "@/Components/Button";
+import JetNavLink from "@/Jetstream/NavLink";
 
-    export default {
-        components: {
-            JetApplicationLogo,
-            JetButton,
-            JetNavLink
-        },
-    }
+export default {
+  components: {
+    JetApplicationLogo,
+    Button,
+    JetNavLink,
+  },
+};
 </script>
