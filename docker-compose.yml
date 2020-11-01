@@ -13,37 +13,42 @@ services:
     working_dir: /var/www/
     volumes:
       - ./:/var/www
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
-      - kraken
+      - app-network
 
   db:
     image: mysql:5.7
     container_name: kraken-db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_HOST: kraken-db
+      MYSQL_DATABASE: storage
+      MYSQL_ROOT_PASSWORD: spongebob
+      MYSQL_PASSWORD: tentacles
+      MYSQL_USER: squidward
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
-      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+      - ./docker/mysql:/docker-entrypoint-initdb.d
+      - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
     networks:
-      - kraken
+      - app-network
 
   nginx:
     image: nginx:alpine
     container_name: kraken-nginx
     restart: unless-stopped
+    tty: true
     ports:
-      - 8000:80
+      - "80:80"
+      - "443:443"
     volumes:
       - ./:/var/www
-      - ./docker-compose/nginx:/etc/nginx/conf.d/
+      - ./docker/nginx:/etc/nginx/conf.d/
     networks:
-      - kraken
+      - app-network
 
 networks:
-  kraken:
+  app-network:
     driver: bridge
