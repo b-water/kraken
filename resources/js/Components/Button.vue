@@ -1,5 +1,21 @@
 <template>
-  <button :type="type" class="btn btn-indigo btn-indigo-thicc">
+  <button
+    :type="type"
+    class="btn"
+    v-bind:class="[
+      {
+        'btn-disabled': disabled,
+      },
+      {
+        'btn-thicc': thicc,
+      },
+      {
+        'btn-blue': color === 'blue' ? true : false,
+        'btn-indigo': color === 'indigo' ? true : false,
+        'btn-teal': color === 'teal' ? true : false,
+      },
+    ]"
+  >
     <slot></slot>
   </button>
 </template>
@@ -12,7 +28,15 @@ export default {
     },
     color: {
       type: String,
-      default: "",
+      default: "indigo",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    thicc: {
+      type: Boolean,
+      default: false,
     },
   },
 };

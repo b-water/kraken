@@ -1995,6 +1995,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     type: {
@@ -2003,7 +2019,15 @@ __webpack_require__.r(__webpack_exports__);
     },
     color: {
       type: String,
-      "default": ""
+      "default": "indigo"
+    },
+    disabled: {
+      type: Boolean,
+      "default": false
+    },
+    thicc: {
+      type: Boolean,
+      "default": false
     }
   }
 });
@@ -23385,9 +23409,9 @@ var render = function() {
           "div",
           { staticClass: "col-span-8" },
           [
-            _c("Button", [_vm._v("Deposit")]),
+            _c("Button", { attrs: { color: "blue" } }, [_vm._v("Deposit")]),
             _vm._v(" "),
-            _c("Button", [_vm._v("Payment")])
+            _c("Button", { attrs: { thicc: "" } }, [_vm._v("Payment")])
           ],
           1
         ),
@@ -23395,7 +23419,11 @@ var render = function() {
         _c(
           "div",
           { staticClass: "col-span-2" },
-          [_c("Button", [_vm._v("Add Account")])],
+          [
+            _c("Button", { attrs: { color: "teal", thicc: "" } }, [
+              _vm._v("Add Account")
+            ])
+          ],
           1
         )
       ])
@@ -23461,7 +23489,20 @@ var render = function() {
   return _c(
     "button",
     {
-      staticClass: "btn btn-indigo btn-indigo-thicc",
+      staticClass: "btn",
+      class: [
+        {
+          "btn-disabled": _vm.disabled
+        },
+        {
+          "btn-thicc": _vm.thicc
+        },
+        {
+          "btn-blue": _vm.color === "blue" ? true : false,
+          "btn-indigo": _vm.color === "indigo" ? true : false,
+          "btn-teal": _vm.color === "teal" ? true : false
+        }
+      ],
       attrs: { type: _vm.type }
     },
     [_vm._t("default")],

@@ -3,11 +3,11 @@
     <div class="p-6 bg-white border-b border-gray-200">
       <div class="grid grid-cols-10">
         <div class="col-span-8">
-          <Button>Deposit</Button>
-          <Button>Payment</Button>
+          <Button color="blue">Deposit</Button>
+          <Button thicc>Payment</Button>
         </div>
         <div class="col-span-2">
-          <Button>Add Account</Button>
+          <Button color="teal" thicc>Add Account</Button>
         </div>
       </div>
     </div>

@@ -2,38 +2,78 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.btn {
-    @apply font-bold py-2 px-4 rounded;
-}
+@layer base {
+    @font-face {
+      font-family: Proxima Nova;
+      font-weight: 400;
+      src: url(/fonts/proxima-nova/400-regular.woff) format("woff");
+    }
+    @font-face {
+      font-family: Proxima Nova;
+      font-weight: 500;
+      src: url(/fonts/proxima-nova/500-medium.woff) format("woff");
+    }
+  }
 
-.btn-blue {
-    @apply bg-blue-500 text-white;
-}
-
-.btn-blue:hover {
-    @apply bg-blue-700;
-}
-
-.btn-indigo {
-    @apply bg-indigo-500 text-white;
-}
-
-.btn-indigo:hover {
-    @apply bg-indigo-700 text-white;
-}
-
-.btn-blue-thicc {
-    @apply border-b-4 border-blue-700 rounded;
-}
-
-.btn-blue-thicc:hover {
-    @apply bg-blue-400 border-blue-500;
-}
-
-.btn-indigo-thicc {
-    @apply border-b-4 border-indigo-700 rounded;
-}
-
-.btn-indigo-thicc:hover {
-    @apply bg-indigo-400 border-indigo-500;
+@layer components {
+    .btn {
+        @apply font-bold py-2 px-4 rounded;
+    }
+    
+    .btn-thicc {
+        @apply border-b-4 rounded;
+    }
+    
+    .btn-disabled {
+        @apply opacity-50 cursor-not-allowed;
+    }
+    
+    .btn-teal {
+        @apply bg-teal-500 text-white;
+    }
+    
+    .btn-blue {
+        @apply bg-blue-500 text-white;
+    }
+    
+    .btn-blue:hover {
+        @apply bg-blue-700;
+    }
+    
+    .btn-indigo {
+        @apply bg-indigo-500 text-white;
+    }
+    
+    .btn-indigo:hover {
+        @apply bg-indigo-700 text-white;
+    }
+    
+    .btn-teal:hover {
+        @apply bg-teal-700 text-white;
+    }
+    
+    .btn-blue.btn-thicc {
+        @apply border-blue-700;
+    }
+    
+    .btn-blue.btn-thicc:hover {
+        @apply bg-blue-400 border-blue-500;
+    }
+    
+    .btn-indigo.btn-thicc {
+        @apply border-indigo-700;
+    }
+    
+    .btn-indigo.btn-thicc:hover {
+        @apply bg-indigo-400 border-indigo-500;
+    }
+    
+    .btn-teal.btn-thicc {
+        @apply border-teal-700;
+    }
+    
+    .btn-teal.btn-thicc:hover {
+        @apply bg-teal-400 border-teal-500;
+    }
+    
 }
