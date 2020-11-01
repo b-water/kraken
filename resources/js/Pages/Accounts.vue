@@ -18,12 +18,12 @@
 
 <script>
 import DefaultLayout from "@/Layouts/DefaultLayout";
-import InvestmentCollection from "@/Components/Investment/Collection.vue";
+import AccountCollection from "@/Components/Account/Collection.vue";
 
 export default {
   components: {
     DefaultLayout,
-    InvestmentCollection,
+    AccountCollection,
   },
 };
 </script>
