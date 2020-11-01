@@ -1995,10 +1995,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     type: {
@@ -23389,9 +23385,9 @@ var render = function() {
           "div",
           { staticClass: "col-span-8" },
           [
-            _c("JetButton", [_vm._v("Deposit")]),
+            _c("Button", [_vm._v("Deposit")]),
             _vm._v(" "),
-            _c("JetButton", [_vm._v("Payment")])
+            _c("Button", [_vm._v("Payment")])
           ],
           1
         ),
@@ -23399,7 +23395,7 @@ var render = function() {
         _c(
           "div",
           { staticClass: "col-span-2" },
-          [_c("JetButton", [_vm._v("Add Account")])],
+          [_c("Button", [_vm._v("Add Account")])],
           1
         )
       ])
@@ -23465,8 +23461,7 @@ var render = function() {
   return _c(
     "button",
     {
-      staticClass:
-        "inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150",
+      staticClass: "btn btn-indigo btn-indigo-thicc",
       attrs: { type: _vm.type }
     },
     [_vm._t("default")],
