@@ -2,12 +2,9 @@
   <div>
     <div class="p-6 bg-white border-b border-gray-200">
       <div class="grid grid-cols-10">
-        <div class="col-span-8">
-          <Button color="blue">Deposit</Button>
-          <Button thicc>Payment</Button>
-        </div>
-        <div class="col-span-2">
-          <Button color="teal" thicc>Add Account</Button>
+        <div class="col-span-9"></div>
+        <div class="col-span-1">
+          <EditMenu></EditMenu>
         </div>
       </div>
     </div>
@@ -32,6 +29,7 @@
 <script>
 import JetApplicationLogo from "@/Jetstream/ApplicationLogo";
 import Button from "@/Components/Button";
+import EditMenu from "@/Components/Collection/EditMenu";
 import JetNavLink from "@/Jetstream/NavLink";
 
 export default {
@@ -39,6 +37,7 @@ export default {
     JetApplicationLogo,
     Button,
     JetNavLink,
+    EditMenu,
   },
 };
 </script>
