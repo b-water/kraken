@@ -18,25 +18,12 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 kraken is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Powered by
-<table align="center">
-    <tr>
-        <td>
-            <a href="https://laravel.com" target="_blank">
-                <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" height="100">
-            </a>
-        </td>
-        <td>
-            <a href="https://docker.com" target="_blank">
-                <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png" height="100">
-            </a>
-        </td>
-        <td>
-            <a href="https://docker.com" target="_blank">
-                <img src="https://www.docker.com/sites/default/files/d8/2019-07/horizontal-logo-monochromatic-white.png" height="100">
-                </a>
-        </td>
-    </tr>
-</table>
+ - [Docker](https://laravel.com)
+ - [Alpine Linux](https://alpinelinux.org/)
+ - [Laravel](https://laravel.com)
+ - [Node.js](https://nodejs.org/en/)
+ - [Vue.js](https://vuejs.org/)
+ - [Tailwind](http://tailwindui.com/)
 
 <p align="center">
     <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>

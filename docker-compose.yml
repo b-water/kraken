@@ -30,11 +30,9 @@ services:
       MYSQL_ROOT_PASSWORD: spongebob
       MYSQL_PASSWORD: tentacles
       MYSQL_USER: squidward
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
     volumes:
       - ./resources/docker/mysql:/docker-entrypoint-initdb.d
-      - ./resources/docker/mysql/my.cnf:/etc/mysql/my.cnf
+      - ./resources/docker/mysql/mariadb.cnf:/etc/mysql/mariadb.cnf
     networks:
       - app-network
 
