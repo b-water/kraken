@@ -5,7 +5,7 @@ echo "_ switching into scripts directory"
 cd scripts/
 
 PS3='Please enter your choice: '
-options=("Full Install" "Build Docker Container" "Setup Environment" "Import Data" "Quit")
+options=("Full Install" "Build Docker Container" "Setup Environment" "Import Data" "Run Tests" "Quit")
 
 select opt in "${options[@]}"
 do
@@ -30,6 +30,11 @@ do
         "Import Data")
             echo "you chose choice $REPLY which is $opt"
             . import_data.sh
+            break
+            ;;
+        "Run Tests")
+            echo "you chose choice $REPLY which is $opt"
+            . test.sh
             break
             ;;
         "Quit")
