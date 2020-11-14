@@ -22,7 +22,7 @@ WORKDIR $BASE_DIR
 RUN apk update && apk upgrade
 
 # Install dependencies
-RUN apk add g++ make zip unzip git curl nodejs nodejs-npm composer
+RUN apk --no-cache add g++ make zip unzip git curl nodejs nodejs-npm composer autoconf
 
 # Add user for laravel application
 RUN addgroup -S $USER
@@ -36,6 +36,9 @@ COPY --chown=$USER:$USER . $BASE_DIR
 
 # Install PHP Extensions
 RUN docker-php-ext-install mysqli pdo_mysql
+
+# Install & Enable xdebug
+RUN pecl install -f xdebug && docker-php-ext-enable xdebug
 
 # Change current user to www
 USER $USER
