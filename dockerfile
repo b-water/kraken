@@ -37,12 +37,9 @@ COPY --chown=$USER:$USER . $BASE_DIR
 # Install PHP Extensions
 RUN docker-php-ext-install mysqli pdo_mysql
 
-# Install & Enable xdebug
-RUN pecl install -f xdebug && docker-php-ext-enable xdebug
-
 # Change current user to www
 USER $USER
 
-# Expose port 9000 and start php-fpm server
+# Expose port 8080 and start php-fpm server
 EXPOSE $PORT
 CMD ["php-fpm"]
