@@ -5,9 +5,11 @@
                 <div class="col-span-9">
                 </div>
                 <div class="col-span-1">
-                    <JetButton>
-                        Add Stock
-                    </JetButton>
+                    <inertia-link href="assets/add">
+                        <app-button>
+                            Add Asset
+                        </app-button>
+                    </inertia-link>
                 </div>
             </div>
         </div>
@@ -23,19 +25,19 @@
                 <div class="col-span-2 bg-red-300 p-4">STOXX Global Select Dividend</div>
                 <div class="col-span-1 bg-gray-300 p-4">iShares MSCI World</div>
             </div>
-        </div>   
+        </div>
     </div>
 </template>
 
 <script>
     import JetApplicationLogo from '@/Jetstream/ApplicationLogo'
-    import JetButton from  '@/Jetstream/Button'
     import JetNavLink from '@/Jetstream/NavLink'
+    import AppButton from "@/Components/Control/Button";
 
     export default {
         components: {
+            AppButton,
             JetApplicationLogo,
-            JetButton,
             JetNavLink
         },
     }

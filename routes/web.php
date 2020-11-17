@@ -21,16 +21,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/investments', function () {
-    return Inertia\Inertia::render('Investments');
-})->name('investments');
+require_once('assets.php');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/accounts', function () {
     return Inertia\Inertia::render('Accounts');
 })->name('accounts');
-
-/**
-Route::middleware(['auth:sanctum', 'verified'])->get('/budgets', function () {
-    return Inertia\Inertia::render('Budgets');
-})->name('budgets');
- **/

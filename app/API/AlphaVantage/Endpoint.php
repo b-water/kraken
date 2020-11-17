@@ -24,7 +24,7 @@ final class Endpoint {
             'query' => [
                 'apikey' => 'H63CX8PGMH9WLZT8',
                 'function' => 'TIME_SERIES_DAILY_ADJUSTED',
-                'symbol' => 'IBM'
+                'symbol' => 'VGWL'
             ]
         ];
 

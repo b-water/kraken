@@ -28,14 +28,12 @@
 
 <script>
 import JetApplicationLogo from "@/Jetstream/ApplicationLogo";
-import Button from "@/Components/Button";
 import EditMenu from "@/Components/Collection/EditMenu";
 import JetNavLink from "@/Jetstream/NavLink";
 
 export default {
   components: {
     JetApplicationLogo,
-    Button,
     JetNavLink,
     EditMenu,
   },

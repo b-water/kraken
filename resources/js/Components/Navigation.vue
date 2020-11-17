@@ -20,10 +20,10 @@
               Dashboard
             </jet-nav-link>
             <jet-nav-link
-              :href="route('investments')"
-              :active="route().current('investments')"
+              :href="route('assets')"
+              :active="route().current('assets')"
             >
-              Investments
+              Assets
             </jet-nav-link>
             <jet-nav-link
               :href="route('accounts')"
