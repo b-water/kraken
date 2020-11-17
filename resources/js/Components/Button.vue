@@ -1,8 +1,8 @@
 <template>
-  <button
-    :type="type"
-    class="btn"
-    v-bind:class="[
+    <button
+        :type="type"
+        class="btn"
+        v-bind:class="[
       {
         'btn-disabled': disabled,
       },
@@ -15,29 +15,35 @@
         'btn-teal': color === 'teal' ? true : false,
       },
     ]"
-  >
-    <slot></slot>
-  </button>
+    >
+        <slot></slot>
+    </button>
 </template>
 <script>
+
+import Button from "@/Jetstream/Button";
+
 export default {
-  props: {
-    type: {
-      type: String,
-      default: "submit",
+    components: {
+        Button
     },
-    color: {
-      type: String,
-      default: "indigo",
+    props: {
+        type: {
+            type: String,
+            default: "submit",
+        },
+        color: {
+            type: String,
+            default: "indigo",
+        },
+        disabled: {
+            type: Boolean,
+            default: false,
+        },
+        thicc: {
+            type: Boolean,
+            default: false,
+        },
     },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    thicc: {
-      type: Boolean,
-      default: false,
-    },
-  },
 };
 </script>

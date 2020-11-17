@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a15397-5652-4a26-9b5a-cbda72333554" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/API/AlphaVantage/Endpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Components/Control/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/API/AlphaVantage/Endpoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/API/AlphaVantage/Endpoint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Investment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Asset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Investment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_31_204414_investments.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docker/php/local.ini" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docker/php/local.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Account/Collection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Account/Collection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Collection/EditMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Collection/EditMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Investment/Collection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Asset/Collection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Navigation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Investments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Assets.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -178,7 +189,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/Components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -187,8 +198,18 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.protractor.protractor_package" value="" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components" />
+      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components\Asset" />
+      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Pages\Asset" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components\Control" />
+    </key>
   </component>
   <component name="RunManager" selected="PHPUnit.AlphaVantage.testConstruct">
     <configuration name="AlphaVantage.testConstruct" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -262,7 +283,13 @@
       <workItem from="1605385965660" duration="1117000" />
       <workItem from="1605387149128" duration="194000" />
       <workItem from="1605387355684" duration="15000" />
-      <workItem from="1605387482280" duration="1595000" />
+      <workItem from="1605387482280" duration="2235000" />
+      <workItem from="1605391962460" duration="6000" />
+      <workItem from="1605392573612" duration="1618000" />
+      <workItem from="1605449666030" duration="3580000" />
+      <workItem from="1605476928260" duration="99000" />
+      <workItem from="1605477038117" duration="908000" />
+      <workItem from="1605633870119" duration="2383000" />
     </task>
     <task id="LOCAL-00001" summary="removed xdebug, needs to run in wsl not in docker container">
       <created>1605386941469</created>
@@ -271,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605386941469</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".">
+      <created>1605390113927</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605390113927</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +313,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="removed xdebug, needs to run in wsl not in docker container" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed xdebug, needs to run in wsl not in docker container" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
