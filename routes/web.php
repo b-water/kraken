@@ -21,8 +21,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
 
+require_once('accounts.php');
 require_once('assets.php');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/accounts', function () {
-    return Inertia\Inertia::render('Accounts');
-})->name('accounts');

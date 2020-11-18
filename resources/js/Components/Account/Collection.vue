@@ -4,7 +4,11 @@
       <div class="grid grid-cols-10">
         <div class="col-span-9"></div>
         <div class="col-span-1">
-          <EditMenu></EditMenu>
+            <inertia-link href="accounts/add">
+                <app-button>
+                    Add Account
+                </app-button>
+            </inertia-link>
         </div>
       </div>
     </div>
@@ -28,14 +32,14 @@
 
 <script>
 import JetApplicationLogo from "@/Jetstream/ApplicationLogo";
-import EditMenu from "@/Components/Collection/EditMenu";
 import JetNavLink from "@/Jetstream/NavLink";
+import AppButton from "@/Components/Control/Button";
 
 export default {
   components: {
     JetApplicationLogo,
     JetNavLink,
-    EditMenu,
+    AppButton
   },
 };
 </script>
