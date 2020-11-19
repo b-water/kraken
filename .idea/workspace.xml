@@ -6,9 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="48a15397-5652-4a26-9b5a-cbda72333554" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_223929_asset.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_223929_create_asset_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Components/Account/Collection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Account/Collection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Account/NewEditForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Account/NewEditForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Control/InputText.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Control/InputText.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/accounts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/AlphaVantage.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/AlphaVantageTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +45,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="1b6ef984-dc24-4b5a-a181-d316f3377f40" name="debian" port="9000" />
@@ -179,7 +187,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/Pages/Account" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -188,24 +201,28 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.protractor.protractor_package" value="" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Debian\home\nico\dev\kraken\app\Http\Controllers" />
+      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components\Control" />
       <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Pages\Account" />
       <recent name="\\wsl$\Debian\home\nico\dev\kraken\routes" />
       <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components\Account" />
-      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components" />
-      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components\Asset" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components\Control" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.AlphaVantage.testConstruct">
+  <component name="RunManager" selected="PHPUnit.AccountControllerTest.testConstruct">
+    <configuration name="AccountControllerTest.testConstruct" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\AccountControllerTest" configuration_file="/home/nico/dev/kraken/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Controller/AccountControllerTest.php" method="testConstruct" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="AlphaVantage.testConstruct" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AlphaVantage" configuration_file="/home/nico/dev/kraken/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AlphaVantage.php" method="testConstruct" scope="Method" />
+      <TestRunner class="Tests\Unit\AlphaVantage" configuration_file="/home/nico/dev/kraken/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AlphaVantageTest.php" method="testConstruct" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ExampleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -247,9 +264,11 @@
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.AlphaVantage.testConstruct" />
       <item itemvalue="PHPUnit.ExampleTest.testBasicTest" />
+      <item itemvalue="PHPUnit.AccountControllerTest.testConstruct" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.AccountControllerTest.testConstruct" />
         <item itemvalue="PHPUnit.AlphaVantage.testConstruct" />
         <item itemvalue="PHPUnit.ExampleTest.testBasicTest" />
       </list>
@@ -283,7 +302,12 @@
       <workItem from="1605477038117" duration="908000" />
       <workItem from="1605633870119" duration="2728000" />
       <workItem from="1605692453963" duration="373000" />
-      <workItem from="1605721863759" duration="2537000" />
+      <workItem from="1605721863759" duration="14209000" />
+      <workItem from="1605797311782" duration="907000" />
+      <workItem from="1605805326708" duration="192000" />
+      <workItem from="1605807856377" duration="2116000" />
+      <workItem from="1605810050871" duration="1214000" />
+      <workItem from="1605811289007" duration="2099000" />
     </task>
     <task id="LOCAL-00001" summary="removed xdebug, needs to run in wsl not in docker container">
       <created>1605386941469</created>
@@ -317,6 +341,16 @@
           <url>file://$PROJECT_DIR$/tests/Unit/ExampleTest.php</url>
           <line>16</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AccountController.php</url>
+          <line>12</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Unit/Controller/AccountControllerTest.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,14 +1,18 @@
 <template>
     <div class="w-full">
         <label>{{ label }}</label>
-        <input :name="name" :id="name" :value="value" type="text" :placeholder="this.placeholder" class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+        <t-select
+            class="cursor-pointer w-full appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            :placeholder="placeholder"
+            :options="options"
+            variant="demo"
+        ></t-select>
         <p v-if="this.error" class="error-text">{{ errorText }}</p>
     </div>
 </template>
 
 <script>
 import Label from "../../Jetstream/Label";
-
 export default {
     name: "InputText",
     components: {
@@ -21,12 +25,16 @@ export default {
         label: {
             type: String
         },
+        options: {
+            type: Array
+        },
         placeholder: {
-            type: String
+            type: String,
+            default: 'Select an option'
         },
         errorText: {
             type: String,
-            default: 'Please fill out this field.'
+            default: 'Please select a option'
         }
     },
     data() {
@@ -38,12 +46,7 @@ export default {
 }
 </script>
 <style scoped>
-.error-text {
-    @apply text-red-500 text-xs italic;
-}
-.input-error {
-    @apply border-red-500;
-}
+
 </style>
 
 

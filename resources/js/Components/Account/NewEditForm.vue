@@ -1,44 +1,61 @@
 <template>
-    <form class="w-full max-w-lg" method="POST">
-        <div class="flex flex-wrap -mx-3 mb-6">
-            <input-text name="name" label="Name" placeholder="Name of your Asset" v-model="name"></input-text>
-            <input-text name="symbol" label="Symbol" placeholder="e.g VWGL" v-model="symbol"></input-text>
-        </div>
-        <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                    Password
-                </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
-                <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+    <form class="w-full" method="POST">
+        <div class="grid grid-cols-10 p-2 gap-3">
+            <div class="col-span-5">
+                <app-input-text name="name" label="Name" placeholder="Name of your Account" v-model="form.name"></app-input-text>
+                <app-input-text name="reference" label="Reference" placeholder="IBAN or Credit Card Number" v-model="form.reference"></app-input-text>
+            </div>
+            <div class="col-span-5">
+                <app-select name="currency" label="Currency" v-model="form.currency" :options="currencies"></app-select>
+                <app-select name="accountType" label="Type" v-model="form.accountType" :options="accountTypes"></app-select>
             </div>
         </div>
-        <div class="flex flex-wrap -mx-3 mb-2">
-            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            </div>
-            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            </div>
-            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                <app-button type="submit" color="indigo">Save</app-button>
+        <div class="grid grid-cols-10 overflow-hidden h-auto">
+            <div class="col-span-9"></div>
+            <div class="col-span1">
+                <div class="relative mr-2 mb-15">
+                    <div class="absolute right-0 top-0">
+                        <button type="button" class="btn btn-indigo" @click="save">Save</button>
+                    </div>
+                </div>
             </div>
         </div>
     </form>
 </template>
 
 <script>
-
-    import InputText from "@/Components/Control/InputText";
-    import AppButton from "@/Components/Control/Button";
+    import AppSelect from "@/Components/Control/Select";
+    import AppInputText from "@/Components/Control/InputText";
 
     export default {
         components: {
-            InputText,
-            AppButton
+            AppInputText,
+            AppSelect
+        },
+        methods: {
+            save() {
+                this.$inertia.post('/accounts/add', this.form);
+            },
         },
         data() {
             return {
-                name: '',
-                symbol: ''
+                form: {
+                    name: '',
+                    symbol: '',
+                    reference: '',
+                    type: '',
+                    currency: ''
+                },
+                currencies: [
+                    { value: 'EUR', text: 'Euro' },
+                    { value: 'USD', text: 'Dollar' },
+                    { value: 'DLL', text: 'Hong-Kong Dollar', disabled: true }
+                ],
+                accountTypes: [
+                    { value: 1, text: 'Basic' },
+                    { value: 2, text: 'Savings' },
+                    { value: 3, text: '', disabled: true }
+                ]
             }
         }
     }
