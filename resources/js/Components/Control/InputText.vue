@@ -1,7 +1,7 @@
 <template>
     <div class="w-full">
         <label>{{ label }}</label>
-        <input :name="name" :id="name" :value="value" type="text" :placeholder="this.placeholder" class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+        <input :name="name" :id="name" :value="value" type="text" :placeholder="this.placeholder" class="">
         <p v-if="this.error" class="error-text">{{ errorText }}</p>
     </div>
 </template>

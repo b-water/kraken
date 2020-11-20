@@ -3858,6 +3858,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3880,13 +3902,13 @@ __webpack_require__.r(__webpack_exports__);
         currency: ''
       },
       currencies: [{
-        value: 'EUR',
+        value: 1,
         text: 'Euro'
       }, {
-        value: 'USD',
+        value: 2,
         text: 'Dollar'
       }, {
-        value: 'DLL',
+        value: 3,
         text: 'Hong-Kong Dollar',
         disabled: true
       }],
@@ -26296,79 +26318,119 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("form", { staticClass: "w-full", attrs: { method: "POST" } }, [
     _c("div", { staticClass: "grid grid-cols-10 p-2 gap-3" }, [
-      _c(
-        "div",
-        { staticClass: "col-span-5" },
-        [
-          _c("app-input-text", {
+      _c("div", { staticClass: "col-span-5" }, [
+        _c("div", { staticClass: "w-full" }, [
+          _c("label", [_vm._v("Name")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.name,
+                expression: "form.name"
+              }
+            ],
+            staticClass: "input-text focus:outline-none focus:bg-white",
             attrs: {
               name: "name",
-              label: "Name",
+              id: "name",
+              type: "text",
               placeholder: "Name of your Account"
             },
-            model: {
-              value: _vm.form.name,
-              callback: function($$v) {
-                _vm.$set(_vm.form, "name", $$v)
-              },
-              expression: "form.name"
+            domProps: { value: _vm.form.name },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "name", $event.target.value)
+              }
             }
-          }),
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "w-full" }, [
+          _c("label", [_vm._v("Reference")]),
           _vm._v(" "),
-          _c("app-input-text", {
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.reference,
+                expression: "form.reference"
+              }
+            ],
+            staticClass: "input-text focus:outline-none focus:bg-white",
             attrs: {
               name: "reference",
-              label: "Reference",
+              id: "reference",
+              type: "text",
               placeholder: "IBAN or Credit Card Number"
             },
-            model: {
-              value: _vm.form.reference,
-              callback: function($$v) {
-                _vm.$set(_vm.form, "reference", $$v)
-              },
-              expression: "form.reference"
+            domProps: { value: _vm.form.reference },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "reference", $event.target.value)
+              }
             }
           })
-        ],
-        1
-      ),
+        ])
+      ]),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-span-5" },
-        [
-          _c("app-select", {
-            attrs: {
-              name: "currency",
-              label: "Currency",
-              options: _vm.currencies
-            },
-            model: {
-              value: _vm.form.currency,
-              callback: function($$v) {
-                _vm.$set(_vm.form, "currency", $$v)
+      _c("div", { staticClass: "col-span-5" }, [
+        _c(
+          "div",
+          { staticClass: "w-full" },
+          [
+            _c("label", [_vm._v("Currency")]),
+            _vm._v(" "),
+            _c("t-select", {
+              staticClass: "select focus:outline-none focus:bg-white",
+              attrs: {
+                placeholder: "Choose a Option",
+                options: _vm.currencies
               },
-              expression: "form.currency"
-            }
-          }),
-          _vm._v(" "),
-          _c("app-select", {
-            attrs: {
-              name: "accountType",
-              label: "Type",
-              options: _vm.accountTypes
-            },
-            model: {
-              value: _vm.form.accountType,
-              callback: function($$v) {
-                _vm.$set(_vm.form, "accountType", $$v)
+              model: {
+                value: _vm.form.currency,
+                callback: function($$v) {
+                  _vm.$set(_vm.form, "currency", $$v)
+                },
+                expression: "form.currency"
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "w-full" },
+          [
+            _c("label", [_vm._v("Type")]),
+            _vm._v(" "),
+            _c("t-select", {
+              staticClass: "select focus:outline-none focus:bg-white",
+              attrs: {
+                placeholder: "Choose a Option",
+                options: _vm.accountTypes
               },
-              expression: "form.accountType"
-            }
-          })
-        ],
-        1
-      )
+              model: {
+                value: _vm.form.type,
+                callback: function($$v) {
+                  _vm.$set(_vm.form, "type", $$v)
+                },
+                expression: "form.type"
+              }
+            })
+          ],
+          1
+        )
+      ])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "grid grid-cols-10 overflow-hidden h-auto" }, [
@@ -26660,8 +26722,6 @@ var render = function() {
     _c("label", [_vm._v(_vm._s(_vm.label))]),
     _vm._v(" "),
     _c("input", {
-      staticClass:
-        "appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white",
       attrs: {
         name: _vm.name,
         id: _vm.name,

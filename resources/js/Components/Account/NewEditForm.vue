@@ -2,12 +2,34 @@
     <form class="w-full" method="POST">
         <div class="grid grid-cols-10 p-2 gap-3">
             <div class="col-span-5">
-                <app-input-text name="name" label="Name" placeholder="Name of your Account" v-model="form.name"></app-input-text>
-                <app-input-text name="reference" label="Reference" placeholder="IBAN or Credit Card Number" v-model="form.reference"></app-input-text>
+                <div class="w-full">
+                    <label>Name</label>
+                    <input name="name" id="name" type="text" placeholder="Name of your Account" v-model="form.name" class="input-text focus:outline-none focus:bg-white">
+                </div>
+                <div class="w-full">
+                    <label>Reference</label>
+                    <input name="reference" id="reference" type="text" placeholder="IBAN or Credit Card Number" v-model="form.reference"  class="input-text focus:outline-none focus:bg-white">
+                </div>
             </div>
             <div class="col-span-5">
-                <app-select name="currency" label="Currency" v-model="form.currency" :options="currencies"></app-select>
-                <app-select name="accountType" label="Type" v-model="form.accountType" :options="accountTypes"></app-select>
+                <div class="w-full">
+                    <label>Currency</label>
+                    <t-select
+                        class="select focus:outline-none focus:bg-white"
+                        placeholder="Choose a Option"
+                        :options="currencies"
+                        v-model="form.currency"
+                    ></t-select>
+                </div>
+                <div class="w-full">
+                    <label>Type</label>
+                    <t-select
+                        class="select focus:outline-none focus:bg-white"
+                        placeholder="Choose a Option"
+                        :options="accountTypes"
+                        v-model="form.type"
+                    ></t-select>
+                </div>
             </div>
         </div>
         <div class="grid grid-cols-10 overflow-hidden h-auto">
@@ -47,9 +69,9 @@
                     currency: ''
                 },
                 currencies: [
-                    { value: 'EUR', text: 'Euro' },
-                    { value: 'USD', text: 'Dollar' },
-                    { value: 'DLL', text: 'Hong-Kong Dollar', disabled: true }
+                    { value: 1, text: 'Euro' },
+                    { value: 2, text: 'Dollar' },
+                    { value: 3, text: 'Hong-Kong Dollar', disabled: true }
                 ],
                 accountTypes: [
                     { value: 1, text: 'Basic' },

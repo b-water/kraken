@@ -9,5 +9,14 @@ class Account extends Model
 {
     use HasFactory;
 
+    protected $table = self::TABLE;
+
     const TABLE = 'accounts';
+
+    protected $fillable = [
+        'name',
+        'reference',
+        'currency',
+        'type'
+    ];
 }
