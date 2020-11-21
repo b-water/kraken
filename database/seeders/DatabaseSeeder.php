@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
+use Database\Seeders\AccountTypesSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 use Faker\Factory as Faker;
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +22,11 @@ class DatabaseSeeder extends Seeder
             'name' => $faker->name,
             'email' => 'default@user',
             'password' => Hash::make('default'),
+        ]);
+
+        $this->call([
+            AccountTypesSeeder::class,
+            CurrenciesSeeder::class,
         ]);
     }
 }

@@ -4,9 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 
 Route::prefix('accounts')->middleware(['auth' ,'verified'])->group( static function () {
-    Route::get('/', static function () {
-        return Inertia\Inertia::render('Accounts');
-    })->name('accounts');
+    Route::get('/', [AccountController::class, 'collection'])->name('accounts');
 
     Route::get('/add', static function () {
         return Inertia\Inertia::render('Account/Add');

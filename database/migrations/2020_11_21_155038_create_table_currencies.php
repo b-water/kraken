@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\Account;
+use App\Models\Currency;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAccountTable extends Migration
+class CreateTableCurrencies extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +14,10 @@ class CreateAccountTable extends Migration
      */
     public function up()
     {
-        Schema::create(Account::TABLE, function (Blueprint $table) {
+        Schema::create(Currency::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
             $table->string('name')->unique();
-            $table->string('reference');
-            $table->tinyInteger('currency');
-            $table->tinyInteger('type');
             $table->tinyInteger('status');
-            $table->decimal('current_balance', 10, 2);
             $table->timestamps();
         });
     }
@@ -34,6 +29,6 @@ class CreateAccountTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Account::TABLE);
+        Schema::dropIfExists(Currency::TABLE);
     }
 }

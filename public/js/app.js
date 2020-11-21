@@ -3803,16 +3803,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    accounts: {
+      type: Array,
+      "default": {}
+    }
+  },
   components: {
     JetApplicationLogo: _Jetstream_ApplicationLogo__WEBPACK_IMPORTED_MODULE_0__["default"],
     JetNavLink: _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -5892,6 +5892,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    accounts: {
+      type: Array,
+      "default": {}
+    }
+  },
   components: {
     DefaultLayout: _Layouts_Default__WEBPACK_IMPORTED_MODULE_0__["default"],
     AccountCollection: _Components_Account_Collection__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -26248,7 +26254,9 @@ var render = function() {
               { attrs: { href: "accounts/add" } },
               [
                 _c("app-button", [
-                  _vm._v("\n                  Add Account\n              ")
+                  _vm._v(
+                    "\n                        Add Account\n                    "
+                  )
                 ])
               ],
               1
@@ -26259,42 +26267,25 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(0)
+    _c(
+      "div",
+      { staticClass: "grid grid-cols-1" },
+      _vm._l(_vm.accounts, function(account) {
+        return _c("div", { key: account.id }, [
+          _c("div", [_vm._v(_vm._s(account.name))]),
+          _vm._v(" "),
+          _c("div", [_vm._v(_vm._s(account.reference))]),
+          _vm._v(" "),
+          _c("div", [_vm._v(_vm._s(account.currency))]),
+          _vm._v(" "),
+          _c("div", [_vm._v(_vm._s(account.type))])
+        ])
+      }),
+      0
+    )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "bg-gray-200 bg-opacity-25" }, [
-      _c("div", { staticClass: "grid grid-cols-10 gap-1" }, [
-        _c("div", { staticClass: "col-span-6 bg-green-300 p-4" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "px-3 py-2 rounded-md text-sm font-medium text-white bg-green-500 focus:outline-none focus:text-white focus:bg-green-700"
-            },
-            [_vm._v("\n          comdirect\n        ")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-span-1 bg-yellow-300 p-4" }, [
-          _vm._v("DKB")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-span-2 bg-red-300 p-4" }, [
-          _vm._v("Scalable Capital")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-span-1 bg-gray-300 p-4" }, [
-          _vm._v("Notgroschen")
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -29716,7 +29707,7 @@ var render = function() {
           _c(
             "div",
             { staticClass: "bg-white overflow-hidden shadow-xl sm:rounded-lg" },
-            [_c("account-collection")],
+            [_c("account-collection", { attrs: { accounts: _vm.accounts } })],
             1
           )
         ])
