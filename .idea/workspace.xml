@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a15397-5652-4a26-9b5a-cbda72333554" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/kraken.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kraken.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_19_180551_create_account_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_180551_create_account_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Components/Account/Collection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Account/Collection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Accounts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Accounts.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Account/NewEditForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Account/NewEditForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Account/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Account/AddPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Accounts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/AccountsPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Asset/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Asset/AddPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Assets.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/AssetsPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/DashboardPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/accounts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/assets.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/assets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +183,12 @@
       <path value="$PROJECT_DIR$/vendor/phpstan/phpstan" />
       <path value="$PROJECT_DIR$/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/vendor/jenssegers/agent" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kI7BGsH9rbemtSAyHlMdWRbCY5" />
@@ -191,7 +205,8 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeders" />
+    <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm" value="WSL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/Components/Account" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -205,11 +220,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components\Account" />
+      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Pages\Account" />
       <recent name="\\wsl$\Debian\home\nico\dev\kraken\database\seeders" />
       <recent name="\\wsl$\Debian\home\nico\dev\kraken\app\Http\Controllers" />
       <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Components\Control" />
-      <recent name="\\wsl$\Debian\home\nico\dev\kraken\resources\js\Pages\Account" />
-      <recent name="\\wsl$\Debian\home\nico\dev\kraken\routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl$\Debian\home\nico\dev\kraken\database\seeders" />
@@ -310,7 +325,9 @@
       <workItem from="1605810050871" duration="1214000" />
       <workItem from="1605811289007" duration="2099000" />
       <workItem from="1605901432597" duration="2060000" />
-      <workItem from="1605966212835" duration="4331000" />
+      <workItem from="1605966212835" duration="5112000" />
+      <workItem from="1605985002128" duration="163000" />
+      <workItem from="1606246149734" duration="4970000" />
     </task>
     <task id="LOCAL-00001" summary="removed xdebug, needs to run in wsl not in docker container">
       <created>1605386941469</created>

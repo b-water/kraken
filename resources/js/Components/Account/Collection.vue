@@ -2,7 +2,12 @@
     <div>
         <div class="p-6 bg-white border-b border-gray-200">
             <div class="grid grid-cols-10">
-                <div class="col-span-9"></div>
+                <div class="col-span-1">
+                    <inertia-link href="accounts/import/finanzguru">
+                        <button type="button" class="btn btn-blue">Import Finanzguru</button>
+                    </inertia-link>
+                </div>
+                <div class="col-span-8"></div>
                 <div class="col-span-1">
                     <inertia-link href="accounts/add">
                         <app-button>

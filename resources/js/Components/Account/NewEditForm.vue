@@ -46,14 +46,7 @@
 </template>
 
 <script>
-    import AppSelect from "@/Components/Control/Select";
-    import AppInputText from "@/Components/Control/InputText";
-
     export default {
-        components: {
-            AppInputText,
-            AppSelect
-        },
         methods: {
             save() {
                 this.$inertia.post('/accounts/add', this.form);

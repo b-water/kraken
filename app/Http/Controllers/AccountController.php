@@ -10,7 +10,7 @@ use Inertia\Inertia;
 class AccountController extends Controller
 {
     public function collection(Request $request) {
-        return Inertia::render('Accounts', [
+        return Inertia::render('AccountsPage', [
             'accounts' => Account::all()
         ]);
     }
@@ -27,6 +27,18 @@ class AccountController extends Controller
 
         if ($account instanceof Account) {
             return Redirect::route('accounts');
+        }
+    }
+
+    public function import(Request $request) {
+        if (!$request->hasFile('excel')) {
+            return null;
+        }
+
+        $excel = $request->file('excel');
+
+        if ($excel->isValid()) {
+            $excel->storeAs('uploads', $excel->getClientOriginalName(), 'public');
         }
     }
 }
