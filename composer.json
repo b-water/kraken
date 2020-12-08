@@ -20,7 +20,8 @@
         "laravel/telescope": "^4.2",
         "laravel/tinker": "^2.5",
         "phpoffice/phpspreadsheet": "^1.15",
-        "tightenco/ziggy": "^0.9.4"
+        "tightenco/ziggy": "^0.9.4",
+        "b-water/php-finanzguru": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -53,6 +54,12 @@
             "Tests\\": "tests/"
         }
     },
+    "repositories":[
+        {
+            "type": "vcs",
+            "url": "git@github.com:b-water/phpFinanzguru.git"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {

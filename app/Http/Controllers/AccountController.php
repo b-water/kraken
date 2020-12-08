@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
+use bwater\phpFinanzguru\Reader;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
+use Throwable;
 
 class AccountController extends Controller
 {
@@ -28,6 +30,8 @@ class AccountController extends Controller
         if ($account instanceof Account) {
             return Redirect::route('accounts');
         }
+
+
     }
 
     public function import(Request $request) {
@@ -35,10 +39,17 @@ class AccountController extends Controller
             return null;
         }
 
-        $excel = $request->file('excel');
+        $file = $request->file('excel');
 
-        if ($excel->isValid()) {
-            $excel->storeAs('uploads', $excel->getClientOriginalName(), 'public');
+        if ($file->isValid()) {
+            try {
+                $reader = new Reader($file->getRealPath());
+                $collection = $reader->setCollection()->getCollection();
+            } catch (Throwable $t) {
+                die($t);
+            }
+
+            var_dump($collection);
         }
     }
 }

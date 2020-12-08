@@ -7,7 +7,7 @@ ENV USER=${USER}
 ARG UID=1000
 ENV UID=${UID}
 
-ARG PORT=9000
+ARG PORT=8080
 ENV PORT=${PORT}
 
 ENV BASE_DIR=/var/www
@@ -22,7 +22,7 @@ WORKDIR $BASE_DIR
 RUN apk update && apk upgrade
 
 # Install dependencies
-RUN apk --no-cache add g++ make zip unzip git curl nodejs nodejs-npm composer autoconf
+RUN apk --no-cache add g++ make zip libpng libzip-dev libpng-dev unzip git curl nodejs nodejs-npm composer autoconf
 
 # Add user for laravel application
 RUN addgroup -S $USER
@@ -35,7 +35,10 @@ COPY . $BASE_DIR
 COPY --chown=$USER:$USER . $BASE_DIR
 
 # Install PHP Extensions
-RUN docker-php-ext-install mysqli pdo_mysql
+RUN docker-php-ext-install mysqli pdo_mysql gd zip
+
+# Install & Enable xdebug
+RUN pecl install -f xdebug && docker-php-ext-enable xdebug
 
 # Change current user to www
 USER $USER
