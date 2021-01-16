@@ -132,6 +132,7 @@
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
       <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
       <path value="$PROJECT_DIR$/vendor/b-water/php-finanzguru" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

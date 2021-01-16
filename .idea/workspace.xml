@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a15397-5652-4a26-9b5a-cbda72333554" name="Default Changelist" comment="">
+    <list default="true" id="48a15397-5652-4a26-9b5a-cbda72333554" name="Default Changelist" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/kraken.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kraken.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/API/Finanzguru/ExcelReader.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/API/Finanzguru/ExcelReaderInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/docker/php/local.ini" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docker/php/local.ini" afterDir="false" />
     </list>
@@ -186,6 +179,7 @@
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
       <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
       <path value="$PROJECT_DIR$/vendor/b-water/php-finanzguru" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kI7BGsH9rbemtSAyHlMdWRbCY5" />
@@ -343,6 +337,7 @@
       <workItem from="1607028196576" duration="822000" />
       <workItem from="1607272150621" duration="56000" />
       <workItem from="1607273570886" duration="1377000" />
+      <workItem from="1610814197326" duration="566000" />
     </task>
     <task id="LOCAL-00001" summary="removed xdebug, needs to run in wsl not in docker container">
       <created>1605386941469</created>
@@ -367,7 +362,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="removed xdebug, needs to run in wsl not in docker container" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
