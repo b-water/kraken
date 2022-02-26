@@ -5,7 +5,7 @@ echo "_ switching into scripts directory"
 cd scripts/
 
 PS3='Please enter your choice: '
-options=("Full Install" "Build Docker Container" "Setup Environment" "Import Data" "Run Tests" "Shutdown & Purge Docker Container" "Quit")
+options=("Full Install" "Build Docker Container" "Setup Environment" "Import Data" "Run Tests" "Shutdown & Purge ALL! Docker Containers on System" "Quit")
 
 select opt in "${options[@]}"
 do
@@ -37,7 +37,7 @@ do
             . test.sh
             break
             ;;
-        "Shutdown & Purge ALL Docker Container")
+        "Shutdown & Purge ALL! Docker Containers on System")
             echo "you chose choice $REPLY which is $opt"
             . down.sh
             . cleanup.sh
