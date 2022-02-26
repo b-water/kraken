@@ -24,6 +24,9 @@ RUN apk update && apk upgrade
 # Install dependencies
 RUN apk --no-cache add g++ make zip libpng libzip-dev libpng-dev unzip git curl nodejs nodejs-npm composer autoconf
 
+# Update to latest Composer
+RUN composer self-update --2
+
 # Add user for laravel application
 RUN addgroup -S $USER
 RUN adduser $USER --disabled-password -G $USER
